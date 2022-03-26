@@ -17,7 +17,7 @@ const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
-  host: 'localhost',
+  host: 'ec2-52-201-124-168.compute-1.amazonaws.com',
   port: 5432,
   pool: {
     max: 5,
