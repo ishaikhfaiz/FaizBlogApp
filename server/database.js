@@ -1,17 +1,30 @@
-const { Client } = require('pg')
-const client = new Client()
-client.connect(err => {
-  if (err) {
-    console.error('connection error', err.stack)
-  } else {
-    console.log('connected')
-  }
-})
+const { Pool } = require('pg');
+
+const pool = new Pool();
+
+pool.on('error', (err, client) => {
+  console.error('Unexpected error on idle client', err);
+  process.exit(-1);
+});
+
+pool.on('connect', (err, client) => {
+  if (err) console.error(err);
+  console.log(client);
+  console.log('Successfully connected to postgres.');
+});
 
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize('postgres://znbfzhztgogqjp:05f0b48e826d0fc3c0d4c7ae63fba0cab4c84b58479e44ca789cfbdaf7ff05e7@ec2-52-201-124-168.compute-1.amazonaws.com:5432/dakv864hep6lie',{
-  dialect: 'postgres'
-});
-module.exports = sequelize;
 
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'postgres',
+  port: 5432,
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
+});
+
+module.exports = sequelize;
 
