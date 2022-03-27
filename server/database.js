@@ -15,13 +15,14 @@ pool.on('connect', (err, client) => {
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialectOptions: {
+  dialect: 'postgres',
+  protocol: 'postgres',
+  dialectOptions: {
       ssl: {
-        require: true,
-        rejectUnauthorized: false
+          require: true,
+          rejectUnauthorized: false
       }
-    }
   }
-);
+});
 
 module.exports = sequelize;
