@@ -22,5 +22,4 @@ const client = new Client({
   }
 });
 
-client.connect();
 
