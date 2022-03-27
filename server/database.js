@@ -13,7 +13,7 @@ pool.on('connect', (err, client) => {
   console.log('Successfully connected to postgres.');
 });
 
-const { Sequelize } = require('sequelize');
+const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
