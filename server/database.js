@@ -19,4 +19,10 @@ pool.connect((err, client, release) => {
     }
     console.log(result.rows)
   })
-})
+});
+
+const { Sequelize } = require('sequelize');
+const sequelize = new Sequelize();
+module.exports = sequelize;
+
+
