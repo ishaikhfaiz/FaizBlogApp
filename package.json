@@ -18,6 +18,7 @@
   "license": "MIT",
   "bin": "index.js",
   "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.10",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.6.0",
@@ -26,6 +27,7 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "pg": "^7.18.2",
+    "pg-hstore": "^2.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
