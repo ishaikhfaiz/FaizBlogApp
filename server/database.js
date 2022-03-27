@@ -15,7 +15,9 @@ pool.connect((err, client, release) => {
 });
 
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize();
+const sequelize = new Sequelize({
+  dialect: 'postgres'
+});
 module.exports = sequelize;
 
 
