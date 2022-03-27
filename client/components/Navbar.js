@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="#">
-        Nick's Blog
+        Faiz's Blog
       </a>
       <button
         className="navbar-toggler"
@@ -69,7 +69,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="http://github.com/nbisigna"
+                  href="https://github.com/ishaikhfaiz"
                   target="_blank"
                 >
                   <i className="fab fa-github fa-lg" />
@@ -78,7 +78,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="http://linkedin.com/in/nbisigna"
+                  href="https://www.linkedin.com/in/ishaikhfaiz/"
                   target="_blank"
                 >
                   <i className="fab fa-linkedin fa-lg" />
@@ -87,16 +87,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="https://www.npmjs.com/~nbisigna"
-                  target="_blank"
-                >
-                  <i className="fab fa-npm fa-lg" />
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="https://www.instagram.com/nickbisignano/"
+                  href="https://www.instagram.com/ishaikhfaiz/"
                   target="_blank"
                 >
                   <i className="fab fa-instagram-square fa-lg" />
@@ -105,16 +96,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="https://www.youtube.com/channel/UCcNI3QYJA2VeidzV-39UbMA"
-                  target="_blank"
-                >
-                  <i className="fab fa-youtube-square fa-lg" />
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="https://twitter.com/nickbisignano"
+                  href="https://twitter.com/ishaikhfaiz"
                   target="_blank"
                 >
                   <i className="fab fa-twitter fa-lg" />
@@ -123,7 +105,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="https://facebook.com/nick.bisignano7/"
+                  href="https://www.facebook.com/ishaikhfaiz/"
                   target="_blank"
                 >
                   <i className="fab fa-facebook-square fa-lg" />
