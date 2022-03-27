@@ -13,13 +13,21 @@ pool.on('connect', (err, client) => {
   console.log('Successfully connected to postgres.');
 });
 
-const { Client } = require('pg');
+const { Sequelize } = require('sequelize');
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'postgres',
+  host: 'localhost',
+  port: 5432,
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  },
   ssl: {
     rejectUnauthorized: false
   }
 });
 
-
+module.exports = sequelize;
