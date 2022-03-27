@@ -15,7 +15,7 @@ pool.on('connect', (err, client) => {
 
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
+const sequelize = new Sequelize(process.env.database, process.env.user, process.env.password, {
   dialect: 'postgres',
   port: 5432,
   pool: {
