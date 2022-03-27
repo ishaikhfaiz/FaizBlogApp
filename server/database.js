@@ -13,21 +13,14 @@ pool.on('connect', (err, client) => {
   console.log('Successfully connected to postgres.');
 });
 
-const { Sequelize } = require('sequelize');
+const { Client } = require('pg');
 
-const sequelize = new Sequelize(
-  'dakv864hep6lie',
-  'znbfzhztgogqjp',
-  '05f0b48e826d0fc3c0d4c7ae63fba0cab4c84b58479e44ca789cfbdaf7ff05e7',{
-  dialect: 'postgres',
-  host: 'ec2-52-201-124-168.compute-1.amazonaws.com',
-  port: 5432,
-  dialectOptions: {
-    "ssl": {
-      "require": true,
-      "rejectUnauthorized": false
-    }
-  },
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
-module.exports = sequelize;
+client.connect();
+
