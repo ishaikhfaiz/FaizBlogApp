@@ -1,6 +1,10 @@
 {
   "name": "nicksblog",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  },
   "description": "Quick start cli for single page React application",
   "main": "index.js",
   "scripts": {
