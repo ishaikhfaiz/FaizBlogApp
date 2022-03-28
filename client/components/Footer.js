@@ -50,7 +50,7 @@ const Footer = () => (
     </table>
     <div style={{ border: '1px solid lightgrey' }} />
     <br />
-    <div>© {new Date().getFullYear()} Faiz Shaikh</div>
+    <div>Faiz Shaikh {new Date().getFullYear()} ©</div>
     <br />
   </div>
 );
