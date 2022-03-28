@@ -1,3 +1,3 @@
-#Nicks Blog
+#Faiz's Blog
 
-- A mini blog built using React w/ PostgreSQL
+- A mini blog built using React & PostgreSQL
