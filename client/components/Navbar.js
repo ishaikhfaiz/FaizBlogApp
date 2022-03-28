@@ -25,9 +25,9 @@ const Navbar = () => {
     }
   };
   return (
-    <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="#">
-        Faiz's Blog
+        FAIZ SHAIKH's Blog
       </a>
       <button
         className="navbar-toggler"
